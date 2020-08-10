@@ -2,6 +2,7 @@ import React from 'react'
 import './Css/navbar.css'
 import { Link } from 'react-router-dom'
 import { Button } from 'semantic-ui-react'
+import ProtectedLink from '../Routing/ProtectedLink'
 
 const NavBar = () => {
     return (
@@ -9,7 +10,7 @@ const NavBar = () => {
             <nav className='container'>
                 <div>
                     <Link to="/">Home</Link>
-                    <Link to="/profile">Profile</Link>
+                    <ProtectedLink to="/profile">Profile</ProtectedLink>
                 </div>
                 <div>
                     <Button>Login</Button>

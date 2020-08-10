@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { LoginContext } from '../Context/LoginContext'
 import { Link } from 'react-router-dom'
+import { LoginContext } from '../Components/Contexts/LoginContext'
 
 const ProtectedLink = ({ to, children }) => {
-    const { isAuthenticated } = useContext(LoginContext)
+    const { state: {isAuthenticated} } = useContext(LoginContext)
     if (isAuthenticated) return <Link to={to}>{children}</Link>
     return null
 }
