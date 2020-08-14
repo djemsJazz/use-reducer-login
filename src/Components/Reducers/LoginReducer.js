@@ -17,20 +17,20 @@ export function loginReducer(state, action) {
         case LOGIN_SUCCESS:
             return {
                 ...state,
-                isLoggedIn: true,
+                isAuthenticated: true,
                 isLoading: false
             }
         case LOGIN_ERROR:
             return {
                 ...state,
-                isLoggedIn: false,
+                isAuthenticated: false,
                 isLoading: false,
                 error: true
             }
         case LOGOUT:
             return {
                 ...state,
-                isLoggedIn: false,
+                isAuthenticated: false,
                 username: '',
                 setPassword: ''
             }
